@@ -1,5 +1,3 @@
-@import "variables";
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -27,4 +25,6 @@ body {
   -webkit-box-shadow: $cardShadow;
   -moz-box-shadow: $cardShadow;
   box-shadow: $cardShadow;
+
+  background-color: white;
 }
