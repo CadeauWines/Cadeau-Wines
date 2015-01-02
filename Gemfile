@@ -24,6 +24,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem 'annotate', '~> 2.6.5'
+gem 'bootstrap-sass'
+gem 'ionicons-rails'
 
 group :development, :test do
   gem 'sqlite3'
