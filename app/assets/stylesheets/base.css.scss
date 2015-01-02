@@ -19,6 +19,18 @@ body {
     margin: 0;
     width: 100%;
     background-color: $mainBgColor;
+
+    @media (min-width: 768px) {
+      padding-top: $desktopNavbarHeight;
+    }
+
+    @media (max-width: 767px) {
+      padding-top: $mobileNavbarHeight;
+    }
+}
+
+.container {
+  padding: $standardPadding;
 }
 
 .card {
