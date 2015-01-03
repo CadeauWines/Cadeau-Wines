@@ -49,15 +49,22 @@ input {
 
   &[type="submit"] {
     margin-bottom: 0;
-    border: none;
-
-    &:hover {
-      opacity: $hoverOpacity;
-    }
+    @extend .action-btn;
   }
 
   &:focus {
     border-color: $mainColor !important;
     outline: none;
+  }
+}
+
+.action-btn {
+  background-color: $secondaryColor;
+  color: white;
+  border: none;
+  @extend .transition;
+
+  &:hover {
+    opacity: $hoverOpacity;
   }
 }
