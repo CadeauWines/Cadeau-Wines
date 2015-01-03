@@ -8,7 +8,7 @@
   box-shadow: $boxShadow;
   @include navbarHeight;
 
-  > * {
+  * {
     display: inline-block;
   }
 
@@ -32,8 +32,6 @@
   }
 
   #title {
-    position: relative;
-    top: -2px; // Cancel some dumb offset from inline divs
     @include navbarHeight;
     @include navbarLineHeight;
 
@@ -45,4 +43,6 @@
       font-size: 20px;
     }
   }
+
+
 }

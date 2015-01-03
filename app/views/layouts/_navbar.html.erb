@@ -1,10 +1,12 @@
 <div class="cadeau-navbar">
-  <div id="menu-button"><i class="ion-android-menu"></i></div>
-  <div id="title">
-    <% if !(yield(:title).empty?) %>
-        <%= yield(:title) %>
-      <% else %>
-        <%= 'Cadeau Wines' %>
-      <% end %>
+  <div class="pull-left">
+    <div id="menu-button"><i class="ion-android-menu"></i></div>
+    <div id="title">
+      <% if !(yield(:title).empty?) %>
+          <%= yield(:title) %>
+        <% else %>
+          <%= 'Cadeau Wines' %>
+        <% end %>
+    </div>
   </div>
 </div>
