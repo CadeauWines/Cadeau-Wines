@@ -1,0 +1,70 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    position: relative;
+    font-family: Roboto;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: $mainBgColor;
+    @media (min-width: 768px) {
+      padding-top: $desktopNavbarHeight;
+    }
+
+    @media (max-width: 767px) {
+      padding-top: $mobileNavbarHeight;
+    }
+}
+
+.container {
+  padding: $standardPadding;
+}
+
+.card {
+  -webkit-box-shadow: $cardShadow;
+  -moz-box-shadow: $cardShadow;
+  box-shadow: $cardShadow;
+
+  background-color: white;
+}
+
+input {
+  padding: $tightPadding;
+  font-size: 16px;
+  border: 2px solid #dddddd;
+  margin-bottom: $tightPadding;
+  @extend .transition;
+
+  &[type="submit"] {
+    margin-bottom: 0;
+    @extend .action-btn;
+  }
+
+  &:focus {
+    border-color: $mainColor !important;
+    outline: none;
+  }
+}
+
+.action-btn {
+  background-color: $secondaryColor;
+  color: white;
+  border: none;
+  @extend .transition;
+
+  &:hover {
+    opacity: $hoverOpacity;
+  }
+}

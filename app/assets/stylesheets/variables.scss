@@ -1,0 +1,66 @@
+/*= Variables
+=======================*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+$mainColor:             #ffc564;
+$secondaryColor:        #ff9955;
+$mainBgColor:           #e9e9e9;
+$errorColor:            #e74c3c;
+
+$standardPadding:       20px;
+$tightPadding:          12px;
+
+$desktopNavbarHeight:   64px;
+$mobileNavbarHeight:    48px;
+
+$hoverOpacity:          0.7;
+
+$boxShadow:             0 0 10px rgba(0,0,0,0.5);
+
+$cardShadow:            rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px, rgba(0, 0, 0, 0.156863) 0px 2px 10px 0px;
+$selectedCardShadow:    rgba(0, 0, 0, 0.2) 0px 27px 24px 0px, rgba(0, 0, 0, 0.219608) 0px 40px 77px 0px;
+
+
+/*= Functions
+=======================*/
+
+@mixin navbarHeight {
+  @media (min-width: 768px) {
+    height: $desktopNavbarHeight;
+  }
+
+  @media (max-width: 767px) {
+    height: $mobileNavbarHeight;
+  }
+}
+
+@mixin navbarWidth {
+  @media (min-width: 768px) {
+    width: $desktopNavbarHeight;
+  }
+
+  @media (max-width: 767px) {
+    width: $mobileNavbarHeight;
+  }
+}
+
+@mixin navbarLineHeight {
+  @media (min-width: 768px) {
+    line-height: $desktopNavbarHeight;
+  }
+
+  @media (max-width: 767px) {
+    line-height: $mobileNavbarHeight;
+  }
+}
+
+@mixin transition($time) {
+  -webkit-transition: $time;
+  -moz-transition: $time;
+  -ms-transition: $time;
+  transition: $time;
+}
+
+.transition { @include transition(0.3s); }
+.transition-long { @include transition(0.6s); }

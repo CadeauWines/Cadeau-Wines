@@ -1,0 +1,48 @@
+.cadeau-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: white;
+  font-size: 25px;
+  background-color: $mainColor;
+  box-shadow: $boxShadow;
+  @include navbarHeight;
+
+  > * {
+    display: inline-block;
+  }
+
+  #menu-button {
+    @include navbarWidth;
+    @include navbarHeight;
+    text-align: center;
+    @extend .transition;
+
+    &:hover {
+      opacity: $hoverOpacity;
+      cursor: pointer;
+    }
+
+    i {
+      &:before {
+        @include navbarHeight;
+        @include navbarLineHeight;
+      }
+    }
+  }
+
+  #title {
+    position: relative;
+    top: -2px; // Cancel some dumb offset from inline divs
+    @include navbarHeight;
+    @include navbarLineHeight;
+
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 20px;
+    }
+  }
+}

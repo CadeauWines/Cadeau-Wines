@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>CadeauWines</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>
+      <% if !(yield(:title).empty?) %>
+        <% title = yield(:title) %>
+        <%= title + ' | Cadeau Wines' %>
+      <% else %>
+        <%= 'Cadeau Wines' %>
+      <% end %>
+    </title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <!-- <%= devise_error_messages! %> -->
 
-<%= yield %>
+    <%= render 'layouts/navbar' %>
 
-</body>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+  </body>
 </html>

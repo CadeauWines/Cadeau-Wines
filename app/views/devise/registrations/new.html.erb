@@ -1,0 +1,45 @@
+<% provide(:title, 'Sign Up') %>
+
+<div class="devise-registrations-new">
+  <div class="form-card">
+    <%= form_for(@user) do |f| %>
+
+      <% if @user.errors[:first_name].present? %>
+        <span class="error-message">
+          First name <%= @user.errors[:first_name].first %>
+        </span>
+      <% end %>
+      <%= f.text_field :first_name, placeholder: 'First Name' %>
+
+      <% if @user.errors[:last_name].present? %>
+        <span class="error-message">
+          Last name <%= @user.errors[:last_name].first %>
+        </span>
+      <% end %>
+      <%= f.text_field :last_name, placeholder: 'Last Name' %>
+
+      <% if @user.errors[:email].present? %>
+        <span class="error-message">
+          Email <%= @user.errors[:email].first %>
+        </span>
+      <% end %>
+        <%= f.email_field :email, placeholder: 'Email' %>
+
+      <% if @user.errors[:password].present? %>
+        <span class="error-message">
+          Password <%= @user.errors[:password].first %>
+        </span>
+      <% end %>
+      <%= f.password_field :password, placeholder: 'Password' %>
+
+      <% if @user.errors[:password_confirmation].present? %>
+        <span class="error-message">
+          Password Confirmation <%= @user.errors[:password_confirmation].first %>
+        </span>
+      <% end %>
+      <%= f.password_field :password_confirmation, placeholder: 'Confirm Password' %>
+
+      <div><%= f.submit "Sign up" %></div>
+    <% end %>
+  </div>
+</div>
