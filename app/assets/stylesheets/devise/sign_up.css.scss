@@ -3,9 +3,13 @@
   .form-card {
     @extend .card;
 
-    max-width: 500px;
+    max-width: 400px;
     padding: $standardPadding;
     margin-left: auto;
     margin-right: auto;
+
+    input {
+      width: 100%;
+    }
   }
 }
