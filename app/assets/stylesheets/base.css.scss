@@ -19,7 +19,6 @@ body {
     margin: 0;
     width: 100%;
     background-color: $mainBgColor;
-
     @media (min-width: 768px) {
       padding-top: $desktopNavbarHeight;
     }
@@ -53,7 +52,7 @@ input {
     border: none;
 
     &:hover {
-      opacity: 0.7;
+      opacity: $hoverOpacity;
     }
   }
 
