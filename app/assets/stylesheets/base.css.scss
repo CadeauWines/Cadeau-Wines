@@ -58,7 +58,7 @@ input {
   }
 
   &:focus {
-    border-color: $mainColor;
+    border-color: $mainColor !important;
     outline: none;
   }
 }
