@@ -1,0 +1,24 @@
+<% provide(:title, 'Reset Password') %>
+
+<div class="devise-registrations-new">
+  <div class="form-card">
+    <%= form_for(@user, url: password_path(@user), html: { method: :put }) do |f| %>
+
+      <% if @user.errors[:password].present? %>
+        <span class="error-message">
+          Password <%= @user.errors[:password].first %>
+        </span>
+      <% end %>
+      <%= f.password_field :password, placeholder: 'Password' %>
+
+      <% if @user.errors[:password_confirmation].present? %>
+        <span class="error-message">
+          Password Confirmation <%= @user.errors[:password_confirmation].first %>
+        </span>
+      <% end %>
+      <%= f.password_field :password_confirmation, placeholder: 'Confirm Password' %>
+
+      <div><%= f.submit "Reset password" %></div>
+    <% end %>
+  </div>
+</div>

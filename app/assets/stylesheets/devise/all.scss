@@ -1,5 +1,7 @@
 .devise-registrations-new,
-.devise-sessions-new {
+.devise-sessions-new,
+.devise-passwords-new,
+.devise-confirmations-new {
 
   .card, .grouped-card {
     max-width: 400px;
@@ -31,3 +33,5 @@
 
 @import "sign_in";
 @import "sign_up";
+@import "new_confirmation";
+@import "new_password";
