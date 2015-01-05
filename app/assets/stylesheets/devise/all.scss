@@ -1,6 +1,7 @@
 .devise-registrations-new,
 .devise-sessions-new,
 .devise-passwords-new,
+.devise-passwords-edit,
 .devise-confirmations-new {
 
   .card, .grouped-card {
@@ -35,3 +36,4 @@
 @import "sign_up";
 @import "new_confirmation";
 @import "new_password";
+@import "edit_password";
