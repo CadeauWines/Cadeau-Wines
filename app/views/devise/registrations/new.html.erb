@@ -23,7 +23,7 @@
           Email <%= @user.errors[:email].first %>
         </span>
       <% end %>
-        <%= f.email_field :email, placeholder: 'Email' %>
+      <%= f.email_field :email, placeholder: 'Email' %>
 
       <% if @user.errors[:password].present? %>
         <span class="error-message">

@@ -14,11 +14,12 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <!-- <%= devise_error_messages! %> -->
+
+    <%= render 'layouts/flash' %>
 
     <%= render 'layouts/navbar' %>
 
-    <div class="container">
+    <div class="container" id="content">
       <%= yield %>
     </div>
 

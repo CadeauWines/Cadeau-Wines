@@ -1,0 +1,22 @@
+<% provide(:title, 'Forgot Password?') %>
+
+<div class="devise-passwords-new">
+  <div class="form-card">
+    <%= form_for(:user, url: password_path(:user)) do |f| %>
+
+      <% if @user.errors[:email].present? %>
+        <span class="error-message">
+          Email <%= @user.errors[:email].first %>
+        </span>
+      <% end %>
+        <%= f.email_field :email, placeholder: 'Email' %>
+
+      <div><%= f.submit "Reset password" %></div>
+    <% end %>
+  </div>
+  <div class="other-options-card">
+    <div class="card-child">
+      <%= link_to "Didn't receive email confirmation?", new_user_confirmation_path %>
+    </div>
+  </div>
+</div>

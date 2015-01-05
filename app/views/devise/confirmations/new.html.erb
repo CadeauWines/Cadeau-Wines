@@ -1,0 +1,22 @@
+<% provide(:title, 'Resend Confirmation') %>
+
+<div class="devise-confirmations-new">
+  <div class="form-card">
+    <%= form_for(:user, url: confirmation_path(:user)) do |f| %>
+
+      <% if @user.errors[:email].present? %>
+        <span class="error-message">
+          Email <%= @user.errors[:email].first %>
+        </span>
+      <% end %>
+        <%= f.email_field :email, placeholder: 'Email' %>
+
+      <div><%= f.submit "Resend instructions" %></div>
+    <% end %>
+  </div>
+  <div class="other-options-card">
+    <div class="card-child">
+      <%= link_to "Forgot password?", new_user_password_path %>
+    </div>
+  </div>
+</div>

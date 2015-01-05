@@ -28,6 +28,15 @@ body {
     }
 }
 
+#content {
+  @extend .transition-long;
+  opacity: 0;
+
+  &.show {
+    opacity: 1;
+  }
+}
+
 .container {
   padding: $standardPadding;
 }
@@ -37,7 +46,25 @@ body {
   -moz-box-shadow: $cardShadow;
   box-shadow: $cardShadow;
 
+  padding: $standardPadding;
   background-color: white;
+}
+
+.grouped-card {
+  -webkit-box-shadow: $cardShadow;
+  -moz-box-shadow: $cardShadow;
+  box-shadow: $cardShadow;
+
+  background-color: white;
+
+  .card-child {
+    border-bottom: 1px solid $mainBgColor;
+    padding: $standardPadding;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
 }
 
 input {

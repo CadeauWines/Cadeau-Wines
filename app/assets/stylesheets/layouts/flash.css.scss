@@ -1,0 +1,59 @@
+@-webkit-keyframes hide {
+  80% { top: 0; opacity: 1; }
+  99% { top: -130px; opacity: 0; }
+  100% { top: -130px; display: none; }
+}
+
+@-moz-keyframes hide {
+  80% { top: 0; opacity: 1; }
+  99% { top: -130px; opacity: 0; }
+  100% { top: -130px; display: none; }
+}
+
+@-o-keyframes hide {
+  80% { top: 0; opacity: 1; }
+  99% { top: -130px; opacity: 0; }
+  100% { display: none; }
+}
+
+@-ms-keyframes hide {
+  80% { top: 0; opacity: 1; }
+  99% { top: -130px; opacity: 0; }
+  100% { top: -130px;display: none; }
+}
+
+@keyframes hide {
+  80% { top: 0; opacity: 1; }
+  99% { top: -130px; opacity: 0; }
+  100% { top: -130px; display: none; }
+}
+
+.flash {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  @include navbarLineHeight;
+  width: 100%;
+  color: white;
+  font-size: 12px;
+  padding-left: $standardPadding;
+  padding-right: $standardPadding;
+
+  -webkit-animation: hide 5s ease forwards;
+  -moz-animation: hide 5s ease forwards;
+  -o-animation: hide 5s ease forwards;
+  -ms-animation: hide 5s ease forwards;
+  animation: hide 5s ease forwards;
+
+  &.error {
+    background-color: $errorColor;
+  }
+
+  &.success {
+    background-color: $successColor;
+  }
+
+  &.notice {
+    background-color: $noticeColor;
+  }
+}

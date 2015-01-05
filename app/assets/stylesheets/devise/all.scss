@@ -1,2 +1,39 @@
+.devise-registrations-new,
+.devise-sessions-new,
+.devise-passwords-new,
+.devise-passwords-edit,
+.devise-confirmations-new {
+
+  .card, .grouped-card {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-card {
+    @extend .card;
+
+    input {
+      width: 100%;
+    }
+
+    .error-message {
+      color: $errorColor;
+    }
+
+    .field_with_errors input {
+      border-color: $errorColor;
+    }
+  }
+
+  .other-options-card {
+    @extend .grouped-card;
+    margin-top: $standardPadding;
+  }
+}
+
 @import "sign_in";
 @import "sign_up";
+@import "new_confirmation";
+@import "new_password";
+@import "edit_password";

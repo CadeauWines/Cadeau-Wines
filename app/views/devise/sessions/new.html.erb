@@ -1,0 +1,32 @@
+<% provide(:title, 'Sign In') %>
+
+<div class="devise-sessions-new">
+  <div class="form-card">
+    <%= form_for(:user, url: session_path(:user)) do |f| %>
+
+      <% if @user.errors[:email].present? %>
+        <span class="error-message">
+          Email <%= @user.errors[:email].first %>
+        </span>
+      <% end %>
+        <%= f.email_field :email, placeholder: 'Email' %>
+
+      <% if @user.errors[:password].present? %>
+        <span class="error-message">
+          Password <%= @user.errors[:password].first %>
+        </span>
+      <% end %>
+      <%= f.password_field :password, placeholder: 'Password' %>
+
+      <div><%= f.submit "Sign in" %></div>
+    <% end %>
+  </div>
+  <div class="other-options-card">
+    <div class="card-child">
+      <%= link_to "Forgot password?", new_user_password_path %>
+    </div>
+    <div class="card-child">
+      <%= link_to "Didn't receive email confirmation?", new_user_confirmation_path %>
+    </div>
+  </div>
+</div>
