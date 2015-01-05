@@ -49,9 +49,6 @@ $navButtonHeight: 34px;
   }
 
   .pull-right {
-    @include navbarHeight;
-    position: relative;
-    width: 195px;
 
     @media (max-width: 767px) {
       display: none;
@@ -59,9 +56,13 @@ $navButtonHeight: 34px;
 
     .nav-btn {
       @extend .action-btn;
-      position: absolute;
-      top: 50%;
-      margin-top: -$navButtonHeight / 2;
+      @media (min-width: 768px) {
+        margin-top: ($desktopNavbarHeight - $navButtonHeight) / 2;
+      }
+
+      @media (max-width: 767px) {
+        margin-top: ($mobileNavbarHeight - $navButtonHeight) / 2;
+      }
       margin-right: $tightPadding;
       border-radius: 3px;
       height: $navButtonHeight;
@@ -75,12 +76,8 @@ $navButtonHeight: 34px;
         cursor: pointer;
       }
 
-      &:first-child {
-        left: $tightPadding;
-      }
-
       &:last-child {
-        right: $tightPadding - 3; // Cancel offset from HTML element
+        margin-right: $tightPadding + 5;
       }
     }
   }
