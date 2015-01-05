@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require base
+//= require static_pages/static_pages
