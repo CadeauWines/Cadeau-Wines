@@ -16,9 +16,24 @@
   .menu-group {
     border-bottom: 1px solid $mainBgColor;
     width: 100%;
+    padding-top: $standardPadding / 2;
+    padding-bottom: $standardPadding / 2;
 
     &:last-child {
       border-bottom: none;
+    }
+
+    .header {
+      display: block;
+      width: 100%;
+      padding-left: $standardPadding;
+      padding-right: $standardPadding;
+      padding-top: $standardPadding / 2;
+      padding-bottom: $standardPadding / 2;
+      line-height:15px;
+      font-size: 12px;
+      color: #cccccc;
+      letter-spacing: 0.5px;
     }
 
     a {
@@ -26,8 +41,8 @@
       width: 100%;
       padding-left: $standardPadding;
       padding-right: $standardPadding;
-      height: 60px;
-      line-height: 60px;
+      height: 50px;
+      line-height: 50px;
       font-size: 14px;
       color: #757575;
 
