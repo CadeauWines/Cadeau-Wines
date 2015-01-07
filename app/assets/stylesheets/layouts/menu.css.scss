@@ -59,11 +59,13 @@
           padding-right: $standardPadding;
           text-align: center;
           font-family: Ionicons;
+          font-size: 16px;
         }
 
         &.sign-in { &:before { content:"\f3a0"; } }
         &.sign-up { &:before { content:"\f39f"; } }
         &.favorites { &:before { content:"\f370"; } }
+        &.settings { &:before { content:"\f2f7"; } }
         &.sign-out { &:before { content:"\f385"; } }
         &.wines { &:before { content:"\f368"; } }
         &.about { &:before { content:"\f3a7"; } }

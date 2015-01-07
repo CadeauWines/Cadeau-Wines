@@ -3,6 +3,7 @@
     <% if user_signed_in? %>
       <div class="header"><%= "Welcome, #{current_user.first_name} #{current_user.last_name}" %></div>
       <a class="iconed favorites">Wish List</a>
+      <a class="iconed settings">Settings</a>
       <%= link_to "Sign out", destroy_user_session_path, class: "iconed sign-out", method: :delete %>
     <% else %>
       <%= link_to "Sign in", new_user_session_path, class: "iconed sign-in" %>
