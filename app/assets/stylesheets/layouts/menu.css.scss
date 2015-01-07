@@ -24,22 +24,22 @@
     a {
       display: block;
       width: 100%;
-      padding: $standardPadding;
-      line-height: 24px;
-      font-size: 20px;
+      padding-left: $standardPadding;
+      padding-right: $standardPadding;
+      height: 60px;
+      line-height: 60px;
       font-size: 14px;
+      color: #757575;
 
       &:hover {
         text-decoration: none;
-        background-color: $mainBgColor;
+        background-color: #e4e4e4;
       }
 
       &.iconed {
 
         &:before {
           display: inline-block;
-          height: 24px;
-          line-height: 24px;
           width: $standardPadding * 2;
           padding-right: $standardPadding;
           text-align: center;
