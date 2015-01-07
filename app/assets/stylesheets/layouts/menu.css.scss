@@ -48,6 +48,12 @@
 
         &.sign-in { &:before { content:"\f3a0"; } }
         &.sign-up { &:before { content:"\f39f"; } }
+        &.favorites { &:before { content:"\f370"; } }
+        &.sign-out { &:before { content:"\f385"; } }
+        &.wines { &:before { content:"\f368"; } }
+        &.about { &:before { content:"\f3a7"; } }
+        &.announcements { &:before { content:"\f39b"; } }
+        &.contact { &:before { content:"\f2d2"; } }
       }
     }
   }
