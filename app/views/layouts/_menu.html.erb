@@ -1,0 +1,23 @@
+<div id="menu">
+  <div class="menu-group">
+    <% if user_signed_in? %>
+      <div class="header"><%= "Welcome, #{current_user.first_name} #{current_user.last_name}" %></div>
+      <a class="iconed favorites">Wish List</a>
+      <a class="iconed settings">Settings</a>
+      <%= link_to "Sign out", destroy_user_session_path, class: "iconed sign-out", method: :delete %>
+    <% else %>
+      <%= link_to "Sign in", new_user_session_path, class: "iconed sign-in" %>
+      <%= link_to "Sign up", new_user_registration_path, class: "iconed sign-up" %>
+    <% end %>
+  </div>
+  <div class="menu-group">
+    <div class="header">Explore</div>
+    <a class="iconed wines">Wine Catalog</a>
+  </div>
+  <div class="menu-group">
+    <div class="header">Cadeau Wines</div>
+    <a class="iconed about">About</a>
+    <a class="iconed announcements">Announcements</a>
+    <a class="iconed contact">Contact</a>
+  </div>
+</div>

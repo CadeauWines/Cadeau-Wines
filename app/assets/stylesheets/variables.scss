@@ -16,6 +16,8 @@ $tightPadding:          12px;
 $desktopNavbarHeight:   64px;
 $mobileNavbarHeight:    48px;
 
+$menuWidth:             270px;
+
 $hoverOpacity:          0.7;
 
 $boxShadow:             0 0 10px rgba(0,0,0,0.5);
@@ -54,6 +56,16 @@ $selectedCardShadow:    rgba(0, 0, 0, 0.2) 0px 27px 24px 0px, rgba(0, 0, 0, 0.21
 
   @media (max-width: 767px) {
     line-height: $mobileNavbarHeight;
+  }
+}
+
+@mixin navbarTop {
+  @media (min-width: 768px) {
+    top: $desktopNavbarHeight;
+  }
+
+  @media (max-width: 767px) {
+    top: $mobileNavbarHeight;
   }
 }
 
