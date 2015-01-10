@@ -1,5 +1,7 @@
 <% provide(:title, "Wine Products") %>
 
-<% @products.each do |product| %>
-  <%= "a product" %>
-<% end %>
+<div class="products-index">
+  <% @products.each do |product| %>
+    <%= render product %>
+  <% end %>
+</div>

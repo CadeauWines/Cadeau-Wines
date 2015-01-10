@@ -8,4 +8,11 @@ $(document).on( 'page:change', function() {
   $('#menu-button').on('click', function() {
     $('#menu').toggleClass('open');
   });
+
+  $('.products-index').masonry({
+    columnWidth: 300,
+    itemSelector: '.product-card',
+    gutter: 20,
+    isFitWidth: true
+  });
 });
