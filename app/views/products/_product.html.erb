@@ -1,3 +1,15 @@
 <div class="product-card">
-  <img class="image" src="http://cadeauwines.com/x/img/wines/01_2012_viognier.jpg" />
+  <div class="left">
+    <img class="image" src="http://cadeauwines.com/x/img/wines/01_2012_viognier.jpg" />
+    <div class="price"><%= "$#{product.price}" %></div>
+  </div>
+  <div class="right">
+    <div class="name"><%= product.name %></div>
+    <div class="brand"><%= product.brand %></div>
+    <div class="description"><%= product.description %></div>
+    <div class="action-group">
+      <%= link_to "Add to Cart", products_path(product), class: "product-btn" %>
+      <%= link_to "More", products_path(product), class: "product-btn" %>
+    </div>
+  </div>
 </div>
