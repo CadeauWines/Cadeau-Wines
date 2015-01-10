@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require masonry.min
 //= require base
 //= require static_pages/static_pages
 //= require products/products
