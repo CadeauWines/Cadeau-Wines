@@ -11,8 +11,13 @@
     @extend .transition;
 
     &:hover {
-      z-index: 1000;
+      z-index: 2;
       box-shadow: $selectedCardShadow;
+    }
+
+    .image {
+      height: 120px;
+      width: 80px;
     }
   }
 }
