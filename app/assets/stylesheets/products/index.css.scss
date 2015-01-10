@@ -9,7 +9,7 @@ $leftColumnWidth: 80px;
     position: relative;
     z-index: 1;
     width: 300px;
-    height: 300px;
+    height: 400px;
     margin-bottom: $standardPadding;
     overflow: hidden;
     @extend .transition;
@@ -52,7 +52,7 @@ $leftColumnWidth: 80px;
         font-size: 18px;
       }
 
-      .brand {
+      .location {
         font-size: 12px;
         color: #dddddd;
       }
@@ -64,7 +64,7 @@ $leftColumnWidth: 80px;
       .description {
         margin-top: $standardPadding;
         color: #777777;
-        max-height: 130px;
+        max-height: 230px;
         text-overflow: ellipsis;
       }
 
@@ -75,8 +75,6 @@ $leftColumnWidth: 80px;
         width: 100%;
       }
     }
-
-
 
     .product-btn {
       @extend .action-btn;
