@@ -65,7 +65,7 @@ $navButtonHeight: 34px;
         margin-top: ($mobileNavbarHeight - $navButtonHeight) / 2;
       }
       margin-right: $tightPadding;
-      border-radius: 3px;
+      border-radius: $buttonRadius;
       height: $navButtonHeight;
       font-size: 14px;
       line-height: $navButtonHeight;

@@ -75,10 +75,10 @@ $imageWidth: $imageHeight * $imageAspectRatio;
       .action-btn {
         @extend .action-btn;
         display: inline-block;
-        border-radius: 3px;
-        height: 25px;
+        border-radius: $buttonRadius;
+        height: 28px;
+        line-height: 28px;
         font-size: 12px;
-        line-height: 25px;
         padding-left: $tightPadding;
         padding-right: $tightPadding;
         text-decoration: none;
@@ -87,6 +87,10 @@ $imageWidth: $imageHeight * $imageAspectRatio;
 
         &.purchase {
           background-color: $greenColor;
+        }
+
+        &.wish-list {
+          background-color: $yellowColor;
         }
       }
     }
