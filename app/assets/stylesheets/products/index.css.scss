@@ -1,4 +1,6 @@
-$leftColumnWidth: 80px;
+$imageHeight: 120px;
+$imageAspectRatio: 2/3;
+$imageWidth: $imageHeight * $imageAspectRatio;
 
 .products-index {
   margin-left: auto;
@@ -8,8 +10,7 @@ $leftColumnWidth: 80px;
     @extend .card;
     position: relative;
     z-index: 1;
-    width: 300px;
-    height: 400px;
+    width: 260px;
     margin-bottom: $standardPadding;
     overflow: hidden;
     @extend .transition;
@@ -19,79 +20,74 @@ $leftColumnWidth: 80px;
       box-shadow: $selectedCardShadow;
     }
 
-    .left {
-      position: absolute;
-      width: $leftColumnWidth;
-      left: $standardPadding;
-      top: $standardPadding;
-      bottom: $standardPadding;
+    .header {
+      height: $imageHeight;
+      position: relative;
 
-      .image {
-        height: 120px;
-        width: 80px;
-        box-shadow: $lightBoxShadow;
-      }
-
-      .left-action-group {
+      .left {
         position: absolute;
-        bottom: 0;
         left: 0;
-        width: 100%;
+        top: 0;
+        width: $imageWidth;
+        height: $imageHeight;
+
+        .image {
+          height: $imageHeight;
+          width: $imageWidth;
+          box-shadow: $lightBoxShadow;
+        }
       }
 
-    }
-
-    .right {
-      position: absolute;
-      left: $standardPadding + $leftColumnWidth + $tightPadding;
-      right: $standardPadding;
-      top: $standardPadding;
-      bottom: $standardPadding;
-
-      .name {
-        font-size: 18px;
-      }
-
-      .location {
-        font-size: 12px;
-        color: #dddddd;
-      }
-
-      .price {
-        color: $greenColor;
-      }
-
-      .description {
-        margin-top: $standardPadding;
-        color: #777777;
-        max-height: 230px;
-        text-overflow: ellipsis;
-      }
-
-      .right-action-group {
+      .right {
         position: absolute;
-        bottom: 0;
+        left: $imageWidth + $tightPadding;
         right: 0;
-        width: 100%;
+        top: 0;
+        height: $imageHeight;
+
+        .name {
+          font-size: 18px;
+        }
+
+        .location {
+          font-size: 12px;
+          color: #dddddd;
+        }
+
+        .price {
+          color: $greenColor;
+        }
       }
     }
 
-    .product-btn {
-      @extend .action-btn;
-      display: inline-block;
-      border-radius: 3px;
-      height: 25px;
-      font-size: 12px;
-      line-height: 25px;
-      padding-left: $tightPadding;
-      padding-right: $tightPadding;
-      text-decoration: none;
-      text-align: center;
-      background-color: #aaa;
+    .description {
+      margin-top: $standardPadding;
+      color: #777777;
+      max-height: 230px;
+      text-overflow: ellipsis;
+    }
 
-      &.purchase {
-        background-color: $greenColor;
-        width: 100%;
+    .action-group {
+      margin-top: $standardPadding;
+      margin-left: auto;
+      margin-right: auto;
+
+      .action-btn {
+        @extend .action-btn;
+        display: inline-block;
+        border-radius: 3px;
+        height: 25px;
+        font-size: 12px;
+        line-height: 25px;
+        padding-left: $tightPadding;
+        padding-right: $tightPadding;
+        text-decoration: none;
+        text-align: center;
+        background-color: #aaa;
+
+        &.purchase {
+          background-color: $greenColor;
+        }
       }
     }
   }

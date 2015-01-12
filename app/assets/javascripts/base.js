@@ -10,7 +10,7 @@ $(document).on( 'page:change', function() {
   });
 
   $('.products-index').masonry({
-    columnWidth: 300,
+    columnWidth: 260,
     itemSelector: '.product-card',
     gutter: 20,
     isFitWidth: true
