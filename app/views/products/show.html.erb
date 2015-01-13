@@ -8,4 +8,12 @@
       <a class="action-btn">Review</a>
     </div>
   </div>
+  <div class="col-sm-9">
+    <div class="product-card">
+      <div class="name"><%= "#{@product.year} #{@product.name}" %></div>
+      <div class="location"><%= @product.location %></div>
+      <div class="price"><%= '$%.2f' % @product.price %></div>
+      <div class="description"><%= @product.description %></div>
+    </div>
+  </div>
 </div>

@@ -2,6 +2,7 @@
 
   .col-sm-3 {
     .image {
+      box-shadow: $cardShadow;
 
     }
 
@@ -35,7 +36,29 @@
     }
   }
 
-  .col-sm-3 {
+  .col-sm-9 {
+    .product-card {
+      @extend .card;
 
+      .name {
+        font-size: 28px;
+      }
+
+      .location {
+        font-size: 18px;
+        color: #dddddd;
+      }
+
+      .price {
+        font-size: 20px;
+        color: $greenColor;
+      }
+
+      .description {
+        margin-top: $standardPadding;
+        font-size: 22px;
+        color: #777777;
+      }
+    }
   }
 }
