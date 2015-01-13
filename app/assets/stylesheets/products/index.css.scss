@@ -1,0 +1,98 @@
+$imageHeight: 120px;
+$imageAspectRatio: 2/3;
+$imageWidth: $imageHeight * $imageAspectRatio;
+
+.products-index {
+  margin-left: auto;
+  margin-right: auto;
+
+  .product-card {
+    @extend .card;
+    position: relative;
+    z-index: 1;
+    width: 260px;
+    margin-bottom: $standardPadding;
+    overflow: hidden;
+    @extend .transition;
+
+    &:hover {
+      z-index: 10;
+      box-shadow: $selectedCardShadow;
+    }
+
+    .header {
+      height: $imageHeight;
+      position: relative;
+
+      .left {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: $imageWidth;
+        height: $imageHeight;
+
+        .image {
+          height: $imageHeight;
+          width: $imageWidth;
+          box-shadow: $lightBoxShadow;
+        }
+      }
+
+      .right {
+        position: absolute;
+        left: $imageWidth + $tightPadding;
+        right: 0;
+        top: 0;
+        height: $imageHeight;
+
+        .name {
+          font-size: 18px;
+        }
+
+        .location {
+          font-size: 12px;
+          color: #dddddd;
+        }
+
+        .price {
+          color: $greenColor;
+        }
+      }
+    }
+
+    .description {
+      margin-top: $standardPadding;
+      color: #777777;
+      max-height: 230px;
+      text-overflow: ellipsis;
+    }
+
+    .action-group {
+      margin-top: $standardPadding;
+      margin-left: auto;
+      margin-right: auto;
+
+      .action-btn {
+        @extend .action-btn;
+        display: inline-block;
+        border-radius: $buttonRadius;
+        height: 28px;
+        line-height: 28px;
+        font-size: 12px;
+        padding-left: $tightPadding;
+        padding-right: $tightPadding;
+        text-decoration: none;
+        text-align: center;
+        background-color: #aaa;
+
+        &.purchase {
+          background-color: $greenColor;
+        }
+
+        &.wish-list {
+          background-color: $yellowColor;
+        }
+      }
+    }
+  }
+}

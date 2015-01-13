@@ -5,20 +5,22 @@
 #  id          :integer          not null, primary key
 #  name        :string
 #  description :string
-#  brand       :string
 #  price       :decimal(8, 2)
-#  latitude    :decimal(10, 6)
-#  longitude   :decimal(10, 6)
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  year        :integer
+#  location    :string
+#  image_url   :string
 #
 
 class Product < ActiveRecord::Base
 
   validates :name, presence: true
   validates :description, presence: true
-  validates :brand, presence: true
   validates :price, presence: true
+  validates :year, presence: true
+  validates :location, presence: true
+  validates :image_url, presence: true
 
   has_many :favorites
   has_many :users, through: :favorites
