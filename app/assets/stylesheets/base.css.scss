@@ -89,6 +89,7 @@ input {
   background-color: $secondaryColor;
   color: white;
   border: none;
+  text-align: center;
   @extend .transition;
 
   &:hover {

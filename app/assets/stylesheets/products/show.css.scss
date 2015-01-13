@@ -1,0 +1,41 @@
+.products-show {
+
+  .col-sm-3 {
+    .image {
+
+    }
+
+    .action-card {
+      @extend .card;
+
+      .action-btn {
+        @extend .action-btn;
+        display: block;
+        border-radius: $buttonRadius;
+        height: 38px;
+        line-height: 38px;
+        font-size: 16px;
+        text-decoration: none;
+        margin-bottom: $tightPadding;
+        background-color: #aaa;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &.purchase {
+          background-color: $greenColor;
+        }
+
+        &.wish-list {
+          background-color: $yellowColor;
+        }
+
+      }
+    }
+  }
+
+  .col-sm-3 {
+
+  }
+}

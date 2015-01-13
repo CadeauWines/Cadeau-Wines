@@ -1,2 +1,11 @@
 <% provide(:title, @product.name) %>
-<%= @product.name %>
+
+<div class="products-show">
+  <div class="col-sm-3">
+    <div class="action-card">
+      <%= link_to "Purchase", products_path, class: "action-btn purchase" %>
+      <%= link_to "Wish List", products_path, class: "action-btn wish-list" %>
+      <a class="action-btn">Review</a>
+    </div>
+  </div>
+</div>
