@@ -3,11 +3,18 @@
   .col-sm-3 {
     .image {
       box-shadow: $cardShadow;
-
+      @extend .card;
+      margin-bottom: $standardPadding;
+      width: 100%;
+      max-width: 260px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .action-card {
       @extend .card;
+      margin-bottom: $standardPadding;
 
       .action-btn {
         @extend .action-btn;
