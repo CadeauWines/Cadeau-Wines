@@ -45,6 +45,7 @@ body {
   -webkit-box-shadow: $cardShadow;
   -moz-box-shadow: $cardShadow;
   box-shadow: $cardShadow;
+  display: block;
 
   padding: $standardPadding;
   background-color: white;

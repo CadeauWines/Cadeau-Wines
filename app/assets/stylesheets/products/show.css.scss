@@ -1,3 +1,5 @@
+$maxPicWidth: 250px;
+
 .products-show {
 
   .col-sm-3 {
@@ -6,8 +8,7 @@
       @extend .card;
       margin-bottom: $standardPadding;
       width: 100%;
-      max-width: 260px;
-      display: block;
+      max-width: $maxPicWidth;
       margin-left: auto;
       margin-right: auto;
     }
@@ -15,6 +16,9 @@
     .action-card {
       @extend .card;
       margin-bottom: $standardPadding;
+      max-width: $maxPicWidth;
+      margin-left: auto;
+      margin-right: auto;
 
       .action-btn {
         @extend .action-btn;
