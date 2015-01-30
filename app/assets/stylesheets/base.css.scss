@@ -41,7 +41,9 @@ body {
   padding: $standardPadding;
 
   @media (min-width: 768px) {
-      padding-left: $menuWidth + 30px;
+    padding-left: $menuWidth + 30px;
+    margin: 0;
+    width: 100%;
   }
 
 }
