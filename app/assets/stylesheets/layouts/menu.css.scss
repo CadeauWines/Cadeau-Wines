@@ -13,6 +13,10 @@
     left: 0;
   }
 
+  @media (min-width: 768px) {
+    left: 0;
+  }
+
   .menu-group {
     border-bottom: 1px solid $mainBgColor;
     width: 100%;
