@@ -45,6 +45,7 @@ body {
   -webkit-box-shadow: $cardShadow;
   -moz-box-shadow: $cardShadow;
   box-shadow: $cardShadow;
+  display: block;
 
   padding: $standardPadding;
   background-color: white;
@@ -89,6 +90,7 @@ input {
   background-color: $secondaryColor;
   color: white;
   border: none;
+  text-align: center;
   @extend .transition;
 
   &:hover {

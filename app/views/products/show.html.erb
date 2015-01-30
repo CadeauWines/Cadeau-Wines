@@ -1,0 +1,20 @@
+<% provide(:title, @product.name) %>
+
+<div class="products-show">
+  <div class="col-sm-3">
+    <img class="image" src=<%= @product.image_url %> />
+    <div class="action-card">
+      <%= link_to "Purchase", products_path, class: "action-btn purchase" %>
+      <%= link_to "Wish List", products_path, class: "action-btn wish-list" %>
+      <a class="action-btn">Review</a>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="product-card">
+      <div class="name"><%= "#{@product.year} #{@product.name}" %></div>
+      <div class="location"><%= @product.location %></div>
+      <div class="price"><%= '$%.2f' % @product.price %></div>
+      <div class="description"><%= @product.description %></div>
+    </div>
+  </div>
+</div>
