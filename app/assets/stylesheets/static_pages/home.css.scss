@@ -1,0 +1,29 @@
+$coverPhotoHeight: 400px;
+
+.static-pages-home {
+
+  .cover-photo {
+    background-image: url("http://wallpaper-download.net/wallpapers/abstract-wallpapers-blurred-background-wallpaper-34795.jpg");
+    background-size: cover;
+    height: $coverPhotoHeight;
+    margin: -$standardPadding;
+    box-shadow: $boxShadow;
+
+    .title {
+      width: 100%;
+      padding-top: 130px;
+      text-align: center;
+      font-size: 46px;
+      color: white;
+      text-shadow: $textShadow;
+    }
+
+    .slogan {
+      width: 100%;
+      text-align: center;
+      font-size: 20px;
+      color: white;
+      text-shadow: $textShadow;
+    }
+  }
+}
