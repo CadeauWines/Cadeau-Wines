@@ -33,6 +33,19 @@ $coverPhotoHeight: 350px;
       @extend .card;
       text-align: center;
       margin-bottom: $standardPadding;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .image {
+        height: 150px;
+        width: 150px;
+        border-radius: 75px;
+        background-color: $mainColor;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: $standardPadding;
+      }
     }
   }
 }
