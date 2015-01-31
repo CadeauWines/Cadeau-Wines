@@ -26,4 +26,13 @@ $coverPhotoHeight: 400px;
       text-shadow: $textShadow;
     }
   }
+  .info-content {
+    margin-top: 2 * $standardPadding;
+
+    .info-card {
+      @extend .card;
+      text-align: center;
+      margin-bottom: $standardPadding;
+    }
+  }
 }
