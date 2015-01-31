@@ -44,11 +44,15 @@ $coverPhotoHeight: 350px;
         background-color: $mainColor;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: $standardPadding;
+        margin-bottom: $tightPadding;
       }
 
       .header {
         font-size: 30px;
+      }
+
+      .description {
+        color: #777777;
       }
     }
   }
