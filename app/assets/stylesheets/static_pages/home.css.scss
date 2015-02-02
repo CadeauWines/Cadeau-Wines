@@ -55,5 +55,22 @@ $coverPhotoHeight: 350px;
         color: #777777;
       }
     }
+
+    .info-block {
+
+      .icon {
+        font-size: 50px;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .description {
+        font-size: 22px;
+        color: #777777;
+        text-align: center;
+      }
+    }
   }
 }
