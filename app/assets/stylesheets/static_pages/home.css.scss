@@ -7,6 +7,13 @@ $coverPhotoHeight: 350px;
     background-size: cover;
     height: $coverPhotoHeight;
     margin: -$standardPadding;
+    @media (min-width: 768px) {
+      margin-top: -$standardPadding - $desktopNavbarHeight;
+    }
+
+    @media (max-width: 767px) {
+      margin-top: -$standardPadding - $mobileNavbarHeight;
+    }
     box-shadow: $boxShadow;
 
     .title {
