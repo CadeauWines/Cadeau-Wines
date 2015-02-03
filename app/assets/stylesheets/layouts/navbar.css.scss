@@ -10,6 +10,7 @@ $navButtonHeight: 34px;
   background-color: $mainColor;
   box-shadow: $boxShadow;
   @include navbarHeight;
+  @extend .transition;
 
   // To be used only for the home page
   &.home {
@@ -56,6 +57,7 @@ $navButtonHeight: 34px;
   #title {
     @include navbarHeight;
     @include navbarLineHeight;
+    @extend .transition;
 
     @media (min-width: 768px) {
       font-size: 24px;
