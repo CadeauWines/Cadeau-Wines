@@ -9,10 +9,6 @@
   box-shadow: $boxShadow;
   @extend .transition;
 
-  &.open {
-    left: 0!important;
-  }
-
   @media (min-width: 768px) {
     left: 0;
   }
@@ -20,6 +16,10 @@
   // To be used only for the home page
   &.home {
     left: -$menuWidth - 10 !important;
+  }
+
+  &.open {
+    left: 0!important;
   }
 
   .menu-group {
