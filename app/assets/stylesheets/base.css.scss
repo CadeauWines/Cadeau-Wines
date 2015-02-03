@@ -46,6 +46,10 @@ body {
     width: 100%;
   }
 
+  &.home {
+    padding-left: $standardPadding;
+  }
+
 }
 
 .card {

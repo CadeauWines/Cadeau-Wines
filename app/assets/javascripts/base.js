@@ -9,6 +9,10 @@ $(document).on( 'page:change', function() {
     $('#menu').toggleClass('open');
   });
 
+  if ($('.static-pages-home').length) {
+    $('#menu, .container, .cadeau-navbar').addClass('home');
+  }
+
   $('.products-index').masonry({
     columnWidth: 260,
     itemSelector: '.product-card',
