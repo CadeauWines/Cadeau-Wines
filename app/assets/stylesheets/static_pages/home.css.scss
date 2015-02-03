@@ -1,4 +1,4 @@
-$coverPhotoHeight: 350px;
+$coverPhotoHeight: 500px;
 
 .static-pages-home {
 
@@ -18,7 +18,7 @@ $coverPhotoHeight: 350px;
 
     .title {
       width: 100%;
-      padding-top: 130px;
+      padding-top: $coverPhotoHeight / 2 - 50px;
       text-align: center;
       font-size: 46px;
       color: white;
