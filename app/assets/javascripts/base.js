@@ -15,7 +15,7 @@ $(document).on( 'page:change', function() {
     $(window).scroll( function() {
       var scroll = $(this).scrollTop();
       $('.cover-photo').css("background-position-y", scroll / 2);
-      if (scroll > 500 - 64) {
+      if (scroll > 500 - 64 || !($('.static-pages-home').length)) {
         $('.cadeau-navbar').removeClass('home');
       } else {
         $('.cadeau-navbar').addClass('home');
