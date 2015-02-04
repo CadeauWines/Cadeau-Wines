@@ -13,8 +13,9 @@ $(document).on( 'page:change', function() {
     $('#menu, .container, .cadeau-navbar').addClass('home');
 
     $(window).scroll( function() {
-      console.log('sd');
-      if ($(this).scrollTop() > 500 - 64) {
+      var scroll = $(this).scrollTop();
+      $('.cover-photo').css("background-position-y", scroll / 2);
+      if (scroll > 500 - 64) {
         $('.cadeau-navbar').removeClass('home');
       } else {
         $('.cadeau-navbar').addClass('home');
