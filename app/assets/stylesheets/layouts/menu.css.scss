@@ -16,6 +16,24 @@
   // To be used only for the home page
   &.home {
     left: -$menuWidth - 10 !important;
+
+    &:after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      @include navbarHeight;
+      border-bottom: 1px solid $mainBgColor;
+      background-color: white;
+      left: 0;
+      @media (min-width: 768px) {
+        top: -$desktopNavbarHeight;
+      }
+
+      @media (max-width: 767px) {
+        top: -$mobileNavbarHeight;
+      }
+      content: "";
+    }
   }
 
   &.open {
