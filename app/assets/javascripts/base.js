@@ -9,6 +9,24 @@ $(document).on( 'page:change', function() {
     $('#menu').toggleClass('open');
   });
 
+  if ($('.static-pages-home').length) {
+    $('#menu, .container, .cadeau-navbar').addClass('home');
+
+    $(window).scroll( function() {
+      var scroll = $(this).scrollTop();
+      $('.static-pages-home .cover-photo').css("background-position-y", scroll / 2);
+      $('.static-pages-home .cover-photo > .header').css({
+        "padding-top": 200 + scroll / 2,
+        "opacity": 2 - scroll / 150
+      });
+      if (scroll > 500 - 64 || !($('.static-pages-home').length)) {
+        $('.cadeau-navbar').removeClass('home');
+      } else {
+        $('.cadeau-navbar').addClass('home');
+      }
+    });
+  }
+
   $('.products-index').masonry({
     columnWidth: 260,
     itemSelector: '.product-card',

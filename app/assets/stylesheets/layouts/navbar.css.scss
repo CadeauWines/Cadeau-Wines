@@ -10,6 +10,26 @@ $navButtonHeight: 34px;
   background-color: $mainColor;
   box-shadow: $boxShadow;
   @include navbarHeight;
+  @extend .transition;
+
+  // To be used only for the home page
+  &.home {
+    background-color: rgba(0,0,0,0);
+    box-shadow: none;
+
+    #title {
+      opacity: 0;
+    }
+
+    .nav-btn {
+      background-color: rgba(255,255,255,0.3);
+
+      &:hover {
+        background-color: white;
+        color: #777777;
+      }
+    }
+  }
 
   * {
     display: inline-block;
@@ -37,6 +57,7 @@ $navButtonHeight: 34px;
   #title {
     @include navbarHeight;
     @include navbarLineHeight;
+    @extend .transition;
 
     @media (min-width: 768px) {
       font-size: 24px;

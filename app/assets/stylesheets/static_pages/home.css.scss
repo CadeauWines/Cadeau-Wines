@@ -1,0 +1,93 @@
+$coverPhotoHeight: 500px;
+
+.static-pages-home {
+
+  .cover-photo {
+    background-image: url("http://static1.squarespace.com/static/53adf28ae4b0caf114ecc0c4/t/54adbed8e4b0016558c880cc/1420672729462/winebottles.jpg?format=1500w");
+    background-size: cover;
+    height: $coverPhotoHeight;
+    margin: -$standardPadding;
+    @media (min-width: 768px) {
+      margin-top: -$standardPadding - $desktopNavbarHeight;
+    }
+
+    @media (max-width: 767px) {
+      margin-top: -$standardPadding - $mobileNavbarHeight;
+    }
+    box-shadow: $boxShadow;
+
+    .header {
+      width: 100%;
+      padding-top: $coverPhotoHeight / 2 - 50px;
+
+      .title {
+        width: 100%;
+        text-align: center;
+        font-size: 46px;
+        color: white;
+        text-shadow: $textShadow;
+      }
+
+      .slogan {
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        text-shadow: $textShadow;
+      }
+    }
+  }
+  .info-content {
+    margin-top: 2 * $standardPadding;
+
+    .info-card {
+      @extend .card;
+      text-align: center;
+      margin-bottom: $standardPadding;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .image {
+        height: 150px;
+        width: 150px;
+        border-radius: 75px;
+        background-color: $mainColor;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: $tightPadding;
+      }
+
+      .header {
+        font-size: 30px;
+      }
+
+      .description {
+        color: #777777;
+      }
+    }
+
+    .row {
+      margin-bottom: $standardPadding;
+
+      .info-block {
+        margin-left: auto;
+        margin-right: auto;
+
+        .icon {
+          font-size: 100px;
+          text-align: center;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .description {
+          font-size: 22px;
+          color: #777777;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
