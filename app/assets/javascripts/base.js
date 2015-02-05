@@ -7,6 +7,7 @@ $(document).on( 'page:change', function() {
 
   $('#menu-button').on('click', function() {
     $('#menu').toggleClass('open');
+    $('#menu-button').toggleClass('menu-open');
   });
 
   if ($('.static-pages-home').length) {
