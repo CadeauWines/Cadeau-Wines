@@ -15,7 +15,7 @@ $(document).on( 'page:change', function() {
     $(window).scroll( function() {
       var scroll = $(this).scrollTop();
       $('.static-pages-home .cover-photo').css("background-position-y", scroll / 2);
-      $('.static-pages-home .title').css({
+      $('.static-pages-home .cover-photo > .header').css({
         "padding-top": 200 + scroll / 2,
         "opacity": 2 - scroll / 150
       });
