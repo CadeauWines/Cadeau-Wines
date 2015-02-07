@@ -72,6 +72,7 @@ body {
   .card-child {
     border-bottom: 1px solid $mainBgColor;
     padding: $standardPadding;
+    display: block;
 
     &:last-child {
       border-bottom: none;

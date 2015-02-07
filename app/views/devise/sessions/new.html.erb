@@ -22,11 +22,7 @@
     <% end %>
   </div>
   <div class="other-options-card">
-    <div class="card-child">
-      <%= link_to "Forgot password?", new_user_password_path %>
-    </div>
-    <div class="card-child">
-      <%= link_to "Didn't receive email confirmation?", new_user_confirmation_path %>
-    </div>
+    <%= link_to "Forgot password?", new_user_password_path, class: "card-child" %>
+    <%= link_to "Didn't receive email confirmation?", new_user_confirmation_path, class: "card-child" %>
   </div>
 </div>
