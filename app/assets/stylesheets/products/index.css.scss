@@ -51,7 +51,7 @@ $imageWidth: $imageHeight * $imageAspectRatio;
 
         .location {
           font-size: 12px;
-          color: #dddddd;
+          color: $lightGrayColor;
         }
 
         .price {

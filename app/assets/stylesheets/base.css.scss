@@ -82,7 +82,7 @@ body {
 input {
   padding: $tightPadding;
   font-size: 16px;
-  border: 2px solid #dddddd;
+  border: 2px solid $lightGrayColor;
   margin-bottom: $tightPadding;
   @extend .transition;
 
