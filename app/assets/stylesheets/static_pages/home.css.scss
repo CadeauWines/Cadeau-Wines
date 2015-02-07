@@ -63,7 +63,7 @@ $coverPhotoHeight: 500px;
       }
 
       .description {
-        color: #777777;
+        color: $grayColor;
       }
     }
 
@@ -84,7 +84,7 @@ $coverPhotoHeight: 500px;
 
         .description {
           font-size: 22px;
-          color: #777777;
+          color: $grayColor;
           text-align: center;
         }
       }

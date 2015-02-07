@@ -62,7 +62,7 @@ $imageWidth: $imageHeight * $imageAspectRatio;
 
     .description {
       margin-top: $standardPadding;
-      color: #777777;
+      color: $grayColor;
       max-height: 230px;
       text-overflow: ellipsis;
     }

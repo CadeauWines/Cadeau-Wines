@@ -19,7 +19,7 @@ $navButtonHeight: 34px;
 
     #menu-button {
       &.menu-open {
-        color: #777777;
+        color: $grayColor;
       }
     }
 
@@ -32,7 +32,7 @@ $navButtonHeight: 34px;
 
       &:hover {
         background-color: white;
-        color: #777777;
+        color: $grayColor;
       }
     }
   }
