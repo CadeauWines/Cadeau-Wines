@@ -35,6 +35,16 @@ $coverPhotoHeight: 500px;
         color: white;
         text-shadow: $textShadow;
       }
+
+      @media (max-width: 767px) {
+        .title {
+          font-size: 32px;
+        }
+
+        .slogan {
+          font-size: 16px;
+        }
+      }
     }
   }
   .info-content {
