@@ -6,6 +6,12 @@ $imageWidth: $imageHeight * $imageAspectRatio;
   margin-left: auto;
   margin-right: auto;
 
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   .product-card {
     @extend .card;
     position: relative;
@@ -47,6 +53,7 @@ $imageWidth: $imageHeight * $imageAspectRatio;
 
         .name {
           font-size: 18px;
+          color: black;
         }
 
         .location {
