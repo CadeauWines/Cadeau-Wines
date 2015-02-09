@@ -72,7 +72,7 @@
       line-height: 50px;
       font-size: 14px;
       color: #757575;
-      @extend .transition;
+      @extend .transition-short;
 
       &:hover {
         text-decoration: none;
